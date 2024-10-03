@@ -1,0 +1,14 @@
+h1{
+    margin: 50px 100px 50px 30%;
+    padding: auto;
+    color: rgb(166, 74, 253);
+}
+
+.box{
+    margin: 20px 200px 20px 200px;
+    height: 100px;
+    padding:30px;
+    border-radius: 30px;
+    background-color: rgb(157, 244, 141);
+    color: rgb(130, 16, 109);
+}
