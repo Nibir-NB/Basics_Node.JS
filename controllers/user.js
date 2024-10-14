@@ -67,5 +67,22 @@ const signIn = async (req, res) => {
     }
 }
 
-module.exports = { signIn, signUp };
+
+
+const addUser = (req, res) => {
+    const userId = req.params.id;
+    const updatedUser = { id: userId, ...req.body };
+
+    const existingUserIndex = users.findIndex(user => user.id === userId);
+
+    if (existingUserIndex !== -1) {
+        return res.send('The user is already exist')
+    } else {
+        users.push(updatedUser);
+        return res.status(201).json({ message: 'User added successfully!', user: updatedUser });
+    }
+}
+
+
+module.exports = { signIn, signUp, addUser };
 
